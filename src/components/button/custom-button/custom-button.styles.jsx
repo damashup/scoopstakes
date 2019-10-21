@@ -1,35 +1,48 @@
 import styled, {css} from 'styled-components';
 
+import {colorPrimary, colorPrimaryShade, colorGoogleBlue, colorGoogleBlueShade, colorGoogleGreen, colorGoogleGreenShade} from '../../page-template/styles/base-styles';
+
 const vanillaStyles = css`
-    background-color: black;
+    background-color: ${colorPrimary};
     color: white;
     &:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
+        background-color: ${colorPrimaryShade};
+        border: 1px solid ${colorPrimaryShade};
       }
 `;
 
 const googleSignInStyles = css`
-    background-color: #4285f4;
+    background-color: ${colorGoogleBlue};
     color: white;
     &:hover {
-        background-color: #357ae8;
+        background-color: ${colorGoogleBlueShade};
         border: none;
     }
 
 `;
 
+const signUpStyles = css`
+    background-color: ${colorGoogleGreen};
+    color: white
+    &:hover {
+        background-color: ${colorGoogleGreenShade};
+
+    }
+`;
+
+
 const getBespokeButtonStyles = props => {
 
     if(props.isGoogleSignIn){return googleSignInStyles;}
+
+    if(props.signup){return signUpStyles}
 
     return vanillaStyles;
 
 }
 
 export const CustomButtonContainer = styled.button`
-    min-width: 165px;
+    min-width: 255px;
     width: auto;
     margin: auto;
     height: 50px;
@@ -45,6 +58,7 @@ export const CustomButtonContainer = styled.button`
 
     display: flex;
     align-items: center;
+    justify-content: center;
     
 
     ${getBespokeButtonStyles}

@@ -10,6 +10,7 @@ import SubHeader from './components/page-template/sub-header/sub-header.componen
 
 // import pages
 import SignInPage from './components/sign-in/sign-in-page.component';
+import SignUpPage from './components/sign-up/sign-up-page.component';
 
 
 import {checkUserSession} from './redux/user/user.actions'
@@ -31,6 +32,7 @@ const App = ({checkUserSession}) => {
         <SubHeader />
         <Switch>
           <Route exact path='/signin' component={SignInPage} />
+          <Route exact path='/signup' component={SignUpPage} />
         </Switch>
 
       </div>
