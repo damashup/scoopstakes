@@ -6,27 +6,52 @@ import {
   colorPrimary,
   colorPrimaryDark,
   colorWhite,
-  textBig
-} from '../../page-template/styles/base-styles';
+  linkDefault,
+  textBig,
+  textSmall
+  } from '../../page-template/styles/base-styles';
 
 export const HeaderDiv = styled.div`
   padding: 1rem;
   background-image: linear-gradient(to left bottom, ${colorPrimary}, ${colorPrimaryDark});
   display: flex;
   justify-content: space-between;
+  ${textBig}
+  color: ${colorWhite};
+   
 `;
 
-    export const HeaderLogoLink = styled(Link)``;
+    export const HeaderLogoLink = styled(Link)`
+        ${linkDefault}
+      `;
 
         export const HeaderLogo = styled(Logo)`
           height: 6rem;
-          width: auto;
-          cursor: pointer;
+          width: auto;  
+        `;
+
+    export const SignOutDiv = styled.div`
+      color: currentColor;
+
+      display: flex;
+      flex-direction: column;
+    `;
+
+        export const WelcomeUserSpan = styled.span`
+          text-align: right;
+        `;
+
+        export const SignOutLink = styled(Link)`
+            color: currentColor;
+            text-align: right;
+            ${linkDefault}
+            ${textSmall}
+
         `;
 
     export const SignInLink = styled(Link)`
-      ${textBig}
-      color: ${colorWhite};
-      cursor: pointer;
-      text-decoration: none;
+      color: currentColor;
+      ${linkDefault}
     `;
+
+    

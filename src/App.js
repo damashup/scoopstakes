@@ -1,30 +1,47 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { Switch, Route } from 'react-router-dom';
+import {connect} from 'react-redux';
+
+
 
 // import page templates components
 import Header from './components/page-template/header/header.component';
 import SubHeader from './components/page-template/sub-header/sub-header.component';
 
+// import pages
+import SignInPage from './components/sign-in/sign-in-page.component';
+
+
+import {checkUserSession} from './redux/user/user.actions'
+
 
 import './App.scss';
 
-class App extends React.Component {
+const App = ({checkUserSession}) => {
 
-  render(){
+  useEffect(() => {
+    checkUserSession()
+  }, [checkUserSession])
+
+
     return (
       <div className="App">
       <div>
         <Header />
         <SubHeader />
-
-         {/* Routes go here... */}
+        <Switch>
+          <Route exact path='/signin' component={SignInPage} />
+        </Switch>
 
       </div>
   
       </div>
     );
-
-  }
-  
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+})
+
+
+export default connect(null,mapDispatchToProps)(App);
