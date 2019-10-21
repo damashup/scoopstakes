@@ -13,6 +13,6 @@
 (completed)
 ### v0.2.0 - Scoopstakes - Email and Password Sign-up and Sign-in added
 ### v0.1.0 - Scoopstakes - Firebase and Google Sign-in added
-### v0.0.1 - Scoopstakes - Header & Subheader only
+### v0.0.0 - Scoopstakes - Header & Subheader only
 
 
