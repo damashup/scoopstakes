@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import FormInput from '../../form/form-input/form-input.component';
 import CustomButton from '../../button/custom-button/custom-button.component';
 
-import {emailSignUpStart} from '../../../redux/user/user.actions'
+import {signUpStart} from '../../../redux/user/user.actions'
 
 import './sign-up-with-email-and-password.styles';
 
@@ -13,10 +13,10 @@ import {SignUpTextDiv,
         SignUpWithEmailPasswordDiv,
         SignUpWithEmailPasswordHeading} from './sign-up-with-email-and-password.styles';
 
-const SignUpPage = ({emailSignUpStart}) => {
-  const [userCredentials, setCredentials] = useState({displayName: '', email: '', password: '', confirmPassword: ''})
+const SignUpPage = ({signUpStart}) => {
+  const [userCredentials, setUserCredentials] = useState({email: '', password: '', displayName: '',  confirmPassword: ''})
 
-  const { displayName, email, password, confirmPassword } = userCredentials
+  const { displayName, email, password, confirmPassword } = userCredentials;
 
 
   const handleSubmit = event => {
@@ -26,12 +26,12 @@ const SignUpPage = ({emailSignUpStart}) => {
       alert("passwords don't match");
       return;
     }
-    emailSignUpStart(displayName, email, password);
+    signUpStart({ displayName, email, password });
   };
 
   const handleChange = event => {
     const { name, value } = event.target;
-    setCredentials({...userCredentials, [name]: value });;
+    setUserCredentials({...userCredentials, [name]: value });;
   };
 
     return (
@@ -80,7 +80,7 @@ const SignUpPage = ({emailSignUpStart}) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  emailSignUpStart: (displayName, email, password) => dispatch(emailSignUpStart({displayName, email, password}))
+  signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 })
 
 export default connect(null,mapDispatchToProps)(SignUpPage);

@@ -1,5 +1,7 @@
 import {css} from 'styled-components';
 
+export const colorFacebookBlue = css`#3b5998`;
+export const colorFacebookBlueShade = css`#2d4473`;
 export const colorGoogleBlue = css`#4285f4`;
 export const colorGoogleBlueShade = css`#357ae8`;
 export const colorGoogleRed = css`#DB4437`;

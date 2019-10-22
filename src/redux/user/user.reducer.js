@@ -2,6 +2,7 @@ import UserActionTypes from './user.types';
 
 const INITIAL_STATE = {
     currentUser: null,
+    isFetching: false,
     error: null
 };
 
@@ -23,7 +24,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
             };
 
         case UserActionTypes.SIGN_IN_FAILURE:    
-        case UserActionTypes.GOOGLE_SIGN_OUT_FAILURE:    
+        case UserActionTypes.GOOGLE_SIGN_OUT_FAILURE:
+        case UserActionTypes.SIGN_UP_FAILURE:        
             return{
                 ...state,
                 error: action.payload
@@ -33,6 +35,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return state
 
     }
-}
+};
 
 export default userReducer;

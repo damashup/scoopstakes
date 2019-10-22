@@ -1,6 +1,14 @@
 import styled, {css} from 'styled-components';
 
-import {colorPrimary, colorPrimaryShade, colorGoogleBlue, colorGoogleBlueShade, colorGoogleGreen, colorGoogleGreenShade} from '../../page-template/styles/base-styles';
+import {colorPrimary, 
+        colorPrimaryShade, 
+        colorGoogleBlue, 
+        colorGoogleBlueShade, 
+        colorGoogleGreen, 
+        colorGoogleGreenShade,
+        colorFacebookBlue,
+        colorFacebookBlueShade
+        } from '../../page-template/styles/base-styles';
 
 const vanillaStyles = css`
     background-color: ${colorPrimary};
@@ -16,6 +24,15 @@ const googleSignInStyles = css`
     color: white;
     &:hover {
         background-color: ${colorGoogleBlueShade};
+        border: none;
+    }
+`;
+
+const facebookSignInStyles = css`
+    background-color: ${colorFacebookBlue};
+    color: white;
+    &:hover {
+        background-color: ${colorFacebookBlueShade};
         border: none;
     }
 
@@ -34,6 +51,7 @@ const signUpStyles = css`
 const getBespokeButtonStyles = props => {
 
     if(props.isGoogleSignIn){return googleSignInStyles;}
+    if(props.isFacebookSignIn){return facebookSignInStyles;}
 
     if(props.signup){return signUpStyles}
 
@@ -42,7 +60,7 @@ const getBespokeButtonStyles = props => {
 }
 
 export const CustomButtonContainer = styled.button`
-    min-width: 255px;
+    min-width: 275px;
     width: auto;
     margin: auto;
     height: 50px;
