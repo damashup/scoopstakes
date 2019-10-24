@@ -1,19 +1,20 @@
 import React from 'react'
 
+import CustomDivider from '../divider/custom-divider/custom-divider.component';
 import SignUpWithEmailAndPassword from './sign-up-with-email-and-password/sign-up-with-email-and-password.component';
-import {SignInDividerText} from '../sign-in/sign-in-page-styles';
-import SignInWithGoogle from '../sign-in/sign-in-with-google/sign-in-with-google.component';
+import SignInWithSocial from '../sign-in/sign-in-with-social/sign-in-with-social';
 
 import {
   SignUpPageDiv
   } from './sign-up-page.styles';
 
+
 const SignInPage = () => {
   return (
     <SignUpPageDiv>
       <SignUpWithEmailAndPassword />
-      <SignInDividerText>or</SignInDividerText>
-      <SignInWithGoogle />
+      <CustomDivider>or</CustomDivider>
+      <SignInWithSocial />
     </SignUpPageDiv>
   )
 }

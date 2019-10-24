@@ -16,6 +16,9 @@ export const colorPrimaryShade = css`#0505c1`;
 export const colorPrimaryDark = css`#02024d`;
 export const colorWhite = css`#fff;`;
 
+export const colorFormMain = css`black`;
+export const colorFormSub = css`grey`;
+
 export const linkDefault = css`
     text-decoration: none;
     cursor: pointer;

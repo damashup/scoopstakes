@@ -1,27 +1,13 @@
 import React, {useEffect} from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
-import {createStructuredSelector} from 'reselect'
 
-
-
-// import page templates components
-import Header from './components/page-template/header/header.component';
-import SubHeader from './components/page-template/sub-header/sub-header.component';
-
-// import pages
-import SignInPage from './components/sign-in/sign-in-page.component';
-import SignUpPage from './components/sign-up/sign-up-page.component';
-import ProfilePage from './components/profile/profile-page.component'
-
-
-import { selectCurrentUser } from './redux/user/user.selectors';
 import {checkUserSession} from './redux/user/user.actions'
 
 
 import './App.scss';
+import MainPageContainer from './components/page-template/main-page/main-page.container';
 
-const App = ({checkUserSession, currentUser}) => {
+const App = ({checkUserSession}) => {
 
   useEffect(() => {
     checkUserSession()
@@ -30,28 +16,17 @@ const App = ({checkUserSession, currentUser}) => {
 
     return (
       <div className="App">
-      <div>
-        <Header />
-        <SubHeader />
-        <Switch>
-          <Route exact path='/signin' render={() => currentUser ? <Redirect to='/profile' />: <SignInPage />} />
-          <Route exact path='/signup' render={() => currentUser ? <Redirect to='/profile' />: <SignUpPage />} />
-          <Route exact path='/profile' component={ProfilePage} />
-        </Switch>
-
-      </div>
+      <MainPageContainer />
   
       </div>
     );
 }
 
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
-});
+
 
 const mapDispatchToProps = dispatch => ({
   checkUserSession: () => dispatch(checkUserSession())
 })
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default connect(null,mapDispatchToProps)(App);

@@ -59,7 +59,7 @@ const getBespokeButtonStyles = props => {
 
 }
 
-export const CustomButtonContainer = styled.button`
+export const CustomButtonDiv = styled.button`
     min-width: 275px;
     width: auto;
     margin: auto;

@@ -1,11 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import CustomButton from '../../button/custom-button/custom-button.component';
+import CustomButton from '../../../button/custom-button/custom-button.component';
 
-import FacebookImage from "../../../assets/facebook-icon.png";
+import FacebookImage from "../../../../assets/facebook-icon.png";
 
-import {facebookSignInStart} from '../../../redux/user/user.actions';
+import {facebookSignInStart} from '../../../../redux/user/user.actions';
 
 import {
     FacebookIconImg,

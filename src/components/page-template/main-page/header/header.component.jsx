@@ -5,8 +5,8 @@ import { createStructuredSelector } from 'reselect';
 
 
 // import currentUser
-import {selectCurrentUser} from '../../../redux/user/user.selectors'
-import {signOutStart} from '../../../redux/user/user.actions'
+import {selectCurrentUser} from '../../../../redux/user/user.selectors'
+import {signOutStart} from '../../../../redux/user/user.actions'
 
 import {
   HeaderDiv,

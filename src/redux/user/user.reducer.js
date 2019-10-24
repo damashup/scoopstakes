@@ -13,6 +13,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 currentUser: action.payload,
+                isFetching: false,
                 error: null
             };
         
@@ -20,15 +21,17 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 currentUser: null,
+                isFetching: false,
                 error: null
             };
 
         case UserActionTypes.SIGN_IN_FAILURE:    
-        case UserActionTypes.GOOGLE_SIGN_OUT_FAILURE:
+        case UserActionTypes.SIGN_OUT_FAILURE:
         case UserActionTypes.SIGN_UP_FAILURE:        
             return{
                 ...state,
-                error: action.payload
+                error: action.payload,
+                isFetching: false,
             };
 
         default:

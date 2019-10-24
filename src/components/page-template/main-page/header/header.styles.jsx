@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../../assets/nanzo-logo.svg';
+import { ReactComponent as Logo } from '../../../../assets/nanzo-logo.svg';
 
 import {
   colorPrimary,
@@ -9,7 +9,7 @@ import {
   linkDefault,
   textBig,
   textSmall
-  } from '../../page-template/styles/base-styles';
+  } from '../../styles/base-styles';
 
 export const HeaderDiv = styled.div`
   padding: 1rem;

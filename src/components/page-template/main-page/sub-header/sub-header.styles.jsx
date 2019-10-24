@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
     colorPrimary,
     colorPrimaryDark
-    } from '../styles/base-styles';
+    } from '../../styles/base-styles';
 
 export const SubHeaderDiv = styled.div`
     padding: 1rem;

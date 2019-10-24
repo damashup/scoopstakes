@@ -38,7 +38,7 @@ const SignUpPage = ({signUpStart}) => {
       <SignUpWithEmailPasswordDiv>
         <SignUpWithEmailPasswordHeading>Don't have an account?</SignUpWithEmailPasswordHeading>
         <SignUpTextDiv>Sign up with your email and password</SignUpTextDiv>
-        <form className='sign-up-form' onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <FormInput
             type='text'
             name='displayName'
