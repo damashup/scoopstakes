@@ -17,23 +17,23 @@ Complete:
 
 ### PAGES (Overview)
 
-* [Main Page Template](#main-page-template) - in progress
+[Main Page Template](#main-page-template) - in progress
 
-* [Sign In](#sign-in) - complete
+[Sign In](#sign-in) - complete
 
-* [Sign Up](#sign-up) - complete
+[Sign Up](#sign-up) - complete
 
-* [Play Now](#play-now) - in progress
+[Play Now](#play-now) - in progress
 
-* [Leaderboard](#leaderboard) 
+[Leaderboard](#leaderboard) 
 
-* [Results](#results-currentUser-only)
+[Results](#results-currentUser-only)
 
-* [Profile](#profile-currentUser-only) (currentUser)
+[Profile](#profile-currentUser-only) (currentUser)
 
-* [ChallengeNanzo](#challenge-nanzo-currentUser-only) (currentUser)
+[ChallengeNanzo](#challenge-nanzo-currentUser-only) (currentUser)
 
-* [Battle](#battle-currentUser-only) (curentUser)
+[Battle](#battle-currentUser-only) (curentUser)
 
 ### STATE MANAGEMENT (Overview)
 
@@ -42,42 +42,76 @@ Complete:
 [Redux User](#redux-user)
 
 ### API MANAGEMENT (Overview)
-* (Firebase) - Firebase utils
-* (Graphql) - Graphql utils
-* (Football-Data) - Football data utils
-* (EOS) - EOS utils
-* (STEEM) - STEEM utils
+
+(Firebase) - Firebase utils
+
+(Graphql) - Graphql utils
+
+(Football-Data) - Football data utils
+
+(EOS) - EOS utils
+
+(STEEM) - STEEM utils
+
+<hr>
 
 # Testing (Overview)
-* (Unit test) - Component (snapshot testing) - button/ CUSTOM BUTTON
-* (Unit test) - Component (snapshot testing) -  divider/ CUSTOM DIVIDER
-* (Unit test) - Component (snapshot testing) -  form/ FORM INPUT
-* (Unit test) - Component (snapshot testing) -  page-template/ MAIN PAGE
-* (Unit test) - Component (snapshot testing) -  page-template/main-page/ HEADER
-* (Unit test) - Component (snapshot testing) -  page-template/main-page/ SUBHEADER
-* (Unit test) - Component (snapshot testing) -  page-template/main-page/ DIRECTORY
-* (Unit test) - Component (snapshot testing) -  page-template/main-page/directory DIRECTORY ITEM
-* (Unit test) - Component (snapshot testing) -  page-template/styles BASE STYLES
-* (Unit test) - Component (snapshot testing) -  PLAY NOW
-* (Unit test) - Component (snapshot testing) -  PROFILE
-* (Unit test) - Component (snapshot testing) -  SIGN-IN
-* (Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH EMAIL
-* (Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH GOOGLE
-* (Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH FACEBOOK
-* (Unit test) - Component (snapshot testing) -  SIGN-UP
-* (Unit test) - Component (snapshot testing) -  sign-up/ SIGN UP WITH EMAIL
-* (Unit test) - Component (snapshot testing) -  spinner/ WITH SPINNER
-* (Unit text) - Firebase - Firebase Utils
-* (Unit text) - Redux - Directory reducer
-* (Unit text) - Redux - Directory selectors
-* (Unit text) - Redux - User actions
-* (Unit text) - Redux - User reducer
-* (Unit text) - Redux - User sagas
-* (Unit text) - Redux - User selectors
-* (Unit text) - Redux - User types
-* (Unit text) - App.js
 
-<hr*
+(Unit test) - Component (snapshot testing) - button/ CUSTOM BUTTON
+
+(Unit test) - Component (snapshot testing) -  divider/ CUSTOM DIVIDER
+
+(Unit test) - Component (snapshot testing) -  form/ FORM INPUT
+
+(Unit test) - Component (snapshot testing) -  page-template/ MAIN PAGE
+
+(Unit test) - Component (snapshot testing) -  page-template/main-page/ HEADER
+
+(Unit test) - Component (snapshot testing) -  page-template/main-page/ SUBHEADER
+
+(Unit test) - Component (snapshot testing) -  page-template/main-page/ DIRECTORY
+
+(Unit test) - Component (snapshot testing) -  page-template/main-page/directory DIRECTORY ITEM
+
+(Unit test) - Component (snapshot testing) -  page-template/styles BASE STYLES
+
+(Unit test) - Component (snapshot testing) -  PLAY NOW
+
+(Unit test) - Component (snapshot testing) -  PROFILE
+
+(Unit test) - Component (snapshot testing) -  SIGN-IN
+
+(Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH EMAIL
+
+(Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH GOOGLE
+
+(Unit test) - Component (snapshot testing) -  sign-in/sign-in-with-social SIGN-IN WITH FACEBOOK
+
+(Unit test) - Component (snapshot testing) -  SIGN-UP
+
+(Unit test) - Component (snapshot testing) -  sign-up/ SIGN UP WITH EMAIL
+
+(Unit test) - Component (snapshot testing) -  spinner/ WITH SPINNER
+
+(Unit text) - Firebase - Firebase Utils
+
+(Unit text) - Redux - Directory reducer
+
+(Unit text) - Redux - Directory selectors
+
+(Unit text) - Redux - User actions
+
+(Unit text) - Redux - User reducer
+
+(Unit text) - Redux - User sagas
+
+(Unit text) - Redux - User selectors
+
+(Unit text) - Redux - User types
+
+(Unit text) - App.js
+
+<hr>
 
 # Main Page Template
 
@@ -100,6 +134,8 @@ The navigation directory and the Sign In component will be dynamic based on whet
 * (Page Template: Main Page) - Directory component - ADDED
 * (Page Template: Main Page) - Directory Item component - ADDED
 * (Page Template: Main Page) - Header Scoopstakes Title - TO ADD
+
+<hr>
 
 # Sign In
 
@@ -124,6 +160,8 @@ The User State will be managed in Redux user folder
 * (Sign In Page) - Sign-in with Github component
 * (Custom Button) - with Sign-in prop component ADDED
 
+<hr>
+
 # Sign up landing page
 
 ### Description
@@ -134,6 +172,7 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 
 ### To build (WBS)
 
+<hr>
 
 # Play Now landing page
 ### Description
@@ -170,7 +209,10 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Play Now) - Play Now for loggedOutUser
 * (Play Now) - Play Now for currentUser
 
+<hr>
+
 # Leaderboard landing page
+
 ### Description
 
  The Leaderboard landing page will host all leaderboards
@@ -200,7 +242,10 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Leaderboard) - Leaderboard/:Season Table component
 * (Leaderboard) - Leaderboard/:Season Table Item component
 
+<hr>
+
 # Results currentUser Only
+
 ### Description
 
  The Results landing page will be available to the currentUser only
@@ -221,7 +266,10 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Results) - Results/:RoundId page (returns currentUser's results for roundId )
 * (Results) - Results/:RoundId/userId page (returns userId's results for roundId)
 
+<hr>
+
 # Profile currentUser Only
+
 ### Description
 
  The Profile page will be where the currentUser can manage their account
@@ -232,8 +280,10 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Profile) - Wallet component
 * (Profile) - Cash Out component
 
+<hr>
 
 # Challenge Nanzo currentUser Only
+
 ### Description
 
  Challenge Nanzo is an opt in extra to Scoopstakes.
@@ -260,8 +310,10 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Challenge Nanzo) - Challenge Result Summary component
 * (Challenge Nanzo) - Challenge Result Details component
 
+<hr>
 
 # Battle currentUser Only
+
 ### Description
 
  Battles are an element that gives a new dimension to Scoopstakes as it enables PVP interaction
@@ -298,6 +350,8 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (Battle) - Battle/:RoundId/Matched Matched Battle List for All Users component
 * (Battle) - Battle/History/:RoundId/Matched Historic List of Matched/ Unmatched (filter by user or round)
 
+<hr>
+
 # Redux directory
 
  Simple state management for navigation directory items
@@ -308,6 +362,7 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 * (State Management) - Directory Reducers
 * (State Management) - Directory Selectors
 
+<hr>
 
 # Redux user
 
@@ -323,6 +378,7 @@ State management for Firebase users using Redux sagas
 * (State Management) - User selectors
 * (State Management) - User types
 
+<hr>
 
 
 
