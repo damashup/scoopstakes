@@ -3,7 +3,10 @@
 # Pre-Releases (development tracking)
 
 Up Next:
-### v0.4.0
+### v0.4.0 - Play Now page, Twitter & Github sign-in
+* (Sign In Page) - Sign-in with Twitter component
+* (Sign In Page) - Sign-in with Github component
+* (Play Now) - Play Now landing page
 
 Complete:
 ### v0.3.0 - Refactoring and redux testing added
