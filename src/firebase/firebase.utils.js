@@ -53,12 +53,46 @@ export const getCurrentUser = () => {
   })
 }
 
-export const googleProvider = new firebase.auth.GoogleAuthProvider();
-googleProvider.setCustomParameters({ prompt: 'select_account' });
-export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
+// export const fetchSignInMethods = email => auth.fetchSignInMethodsForEmail(email);
+
+
+
+// export const getSignInMethods = email => {
+//   return new Promise((resolve, reject) => {
+//     const unsubscribe = auth.fetchSignInMethodsForEmail(email => {
+//       unsubscribe();
+//       resolve(email);
+//       console.log(email)
+//     }, reject)
+//   })
+// }
 
 export const facebookProvider = new firebase.auth.FacebookAuthProvider();
 facebookProvider.setCustomParameters({ prompt: 'select_account'});
 export const signInWithFacebook = () => auth.signInWithPopup(facebookProvider);
+
+export const githubProvider = new firebase.auth.GithubAuthProvider();
+githubProvider.setCustomParameters({ prompt: 'select_account'});
+export const signInWithGitHub = () => auth.signInWithPopup(githubProvider);
+
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
+
+export const twitterProvider = new firebase.auth.TwitterAuthProvider();
+twitterProvider.setCustomParameters({ prompt: 'select_account'});
+export const signInWithTwitter = () => auth.signInWithPopup(twitterProvider);
+
+export const ERROR_CODE_ACCOUNT_EXISTS =
+  'auth/account-exists-with-different-credential';
+
+export const ERROR_MSG_ACCOUNT_EXISTS = `
+  A Scoopstakes account with this e-mail address already exists. 
+  Try to login with this account instead. 
+  If you think the account is already used from one of the social logins, try to sign-in with one of them.
+  You can link your social accounts from your profile page.
+`;
+
+
 
 export default firebase;

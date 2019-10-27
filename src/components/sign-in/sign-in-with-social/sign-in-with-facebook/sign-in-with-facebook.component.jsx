@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 
 import CustomButton from '../../../button/custom-button/custom-button.component';
 
-import FacebookImage from "../../../../assets/facebook-icon.png";
+import FacebookImage from "../../../../assets/facebook-icon-3.png";
 
-import {facebookSignInStart} from '../../../../redux/user/user.actions';
+import {facebookSignInStart} from '../../../../redux/user/actions/sign-in/start/with-facebook/facebook-sign-in-start.action';
 
 import {
     FacebookIconImg,

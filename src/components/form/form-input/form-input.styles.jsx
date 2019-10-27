@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-import {colorFormMain, colorFormSub} from '../../page-template/styles/base-styles';
+import {colorGreyDark3, colorBlack} from '../../page-template/styles/base-styles';
 
 
 
@@ -8,7 +8,7 @@ import {colorFormMain, colorFormSub} from '../../page-template/styles/base-style
 export const shrinkLabel = css`
     top: -14px;
     font-size: 12px;
-    color: ${colorFormMain};
+    color: ${colorBlack};
 `
 
 export const FormInputDiv = styled.div`
@@ -23,14 +23,14 @@ export const FormInputDiv = styled.div`
 export const FormInputInput = styled.input`
     background: none;
     background-color: white;
-    color: ${colorFormSub};
+    color: ${colorGreyDark3};
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid ${colorFormSub};
+    border-bottom: 1px solid ${colorGreyDark3};
     margin: 25px 0;
 
     &:focus {

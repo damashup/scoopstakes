@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import FormInput from "../../form/form-input/form-input.component";
 import CustomButton from "../../button/custom-button/custom-button.component";
 
-import {emailSignInStart} from '../../../redux/user/user.actions'
+import {emailSignInStart} from '../../../redux/user/actions/sign-in/start/with-email/email-sign-in-start.action';
 
 import {
     SignInTextDiv,

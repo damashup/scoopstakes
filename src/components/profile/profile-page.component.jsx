@@ -1,33 +1,37 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 
-import { selectCurrentUser } from '../../redux/user/user.selectors';
-import ProfileAccountDetailsContainer from './profile-account-details/profile-account-details.container'
+import AccountDetailsContainer from './account-details/account-details.container';
+import LinkAccountsSectionContainer from './link-accounts-section/link-accounts-section.container';
+import {ProfilePageDiv} from './profile-page.styles';
+import { selectCurrentUser } from '../../redux/user/selectors/user.selectors';
 
-import {
-    ProfilePageDiv,
-    LinkedAccountsDiv,
-    NotificationsSettingsDiv    
-    } from './profile-page.styles';
+import {fetchSignInProvidersStart} from '../../redux/user/actions/fetch-sign-in-providers/fetch-sign-in-providers-start.action';
 
-const ProfilePage = () => {
 
-    
+const ProfilePage = ({currentUser,signInProvidersStart}) => {
+    useEffect(() => {signInProvidersStart()},[signInProvidersStart]);
     return (
-        <ProfilePageDiv>
-            
-            <ProfileAccountDetailsContainer />
-            
-            <LinkedAccountsDiv></LinkedAccountsDiv>
-            <NotificationsSettingsDiv></NotificationsSettingsDiv>
+    <ProfilePageDiv>
+     
+        {currentUser  
+            ? 
+            <div>
+                <AccountDetailsContainer />
+                <LinkAccountsSectionContainer />
+            </div> 
+            :
+            'Please login to link accounts'}
+    </ProfilePageDiv>
+)}
 
-        </ProfilePageDiv>
-    )
-}
-
-const mapStateToProps = createStructuredSelector({
+const mapStateToProps = createStructuredSelector ({
     currentUser: selectCurrentUser
-  });
+})
 
-export default connect(mapStateToProps)(ProfilePage);
+const mapDispatchToProps = dispatch => ({
+    signInProvidersStart: () => dispatch(fetchSignInProvidersStart())
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(ProfilePage);

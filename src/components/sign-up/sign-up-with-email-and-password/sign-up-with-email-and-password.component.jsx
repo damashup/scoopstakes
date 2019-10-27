@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import FormInput from '../../form/form-input/form-input.component';
 import CustomButton from '../../button/custom-button/custom-button.component';
 
-import {signUpStart} from '../../../redux/user/user.actions'
+import {signUpStart} from '../../../redux/user/actions/user.actions'
 
 import './sign-up-with-email-and-password.styles';
 

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import {checkUserSession} from './redux/user/user.actions'
+import {checkUserSession} from './redux/user/actions/user.actions';
 
 
 import './App.scss';
@@ -9,11 +9,8 @@ import MainPageContainer from './components/page-template/main-page/main-page.co
 
 const App = ({checkUserSession}) => {
 
-  useEffect(() => {
-    checkUserSession()
-  }, [checkUserSession])
-
-
+  useEffect(() => {checkUserSession()}, [checkUserSession]);
+  
     return (
       <div className="App">
       <MainPageContainer />

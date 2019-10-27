@@ -5,7 +5,7 @@ import CustomButton from '../../../button/custom-button/custom-button.component'
 
 import GoogleImage from "../../../../assets/icon-google-50.png";
 
-import {googleSignInStart} from '../../../../redux/user/user.actions';
+import {googleSignInStart} from '../../../../redux/user/actions/sign-in/start/with-google/google-sign-in-start.action';
 
 import {
     GoogleIconImg,
