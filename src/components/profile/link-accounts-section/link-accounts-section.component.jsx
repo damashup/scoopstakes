@@ -17,8 +17,9 @@ const LinkAccountsSection = ({signInMethods}) => {
     return (
            <LinkAccountsDiv>
                 <LinkAccountsSectionHeader>Link Accounts</LinkAccountsSectionHeader>
-                {signInMethods.map(({id, ...otherSignInMethodsProps}) => (
-                <ProviderItem key={id} {...otherSignInMethodsProps}/>))}
+                {signInMethods.map(({id, ...otherMethodProps}) => (
+                <ProviderItem key={id} {...otherMethodProps} />)
+                )}
            </LinkAccountsDiv>
     )}
 

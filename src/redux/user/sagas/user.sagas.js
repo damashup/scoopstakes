@@ -10,6 +10,7 @@ import {onEmailSignInStart} from './for-sign-in/with-email-start/on-email-sign-i
 import {onSignUpStart} from './sign-up/sign-up-start.saga';
 import {onSignUpSuccess} from './sign-up/sign-up-success.saga';
 import {onFetchSignInProviders} from './for-fetching-sign-in-providers/on-fetch-sign-in-providers';
+import {onLinkProvider} from './for-linking-provider/on-link-provider'
 
 export function* userSagas(){
     yield all([
@@ -22,6 +23,7 @@ export function* userSagas(){
         call(onSignUpStart),
         call(onSignUpSuccess),
         call(onCheckUserSession),
-        call(onFetchSignInProviders)
+        call(onFetchSignInProviders),
+        call(onLinkProvider)
     ]);
 };

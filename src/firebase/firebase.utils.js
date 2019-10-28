@@ -53,20 +53,6 @@ export const getCurrentUser = () => {
   })
 }
 
-// export const fetchSignInMethods = email => auth.fetchSignInMethodsForEmail(email);
-
-
-
-// export const getSignInMethods = email => {
-//   return new Promise((resolve, reject) => {
-//     const unsubscribe = auth.fetchSignInMethodsForEmail(email => {
-//       unsubscribe();
-//       resolve(email);
-//       console.log(email)
-//     }, reject)
-//   })
-// }
-
 export const facebookProvider = new firebase.auth.FacebookAuthProvider();
 facebookProvider.setCustomParameters({ prompt: 'select_account'});
 export const signInWithFacebook = () => auth.signInWithPopup(facebookProvider);
@@ -82,6 +68,18 @@ export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 export const twitterProvider = new firebase.auth.TwitterAuthProvider();
 twitterProvider.setCustomParameters({ prompt: 'select_account'});
 export const signInWithTwitter = () => auth.signInWithPopup(twitterProvider);
+
+export const conditionalProvider = providerName => {
+  if (providerName === 'facebookProvider'){
+    return facebookProvider;
+  } else if (providerName === 'githubProvider'){
+    return githubProvider;
+  } else if (providerName === 'googleProvider'){
+    return googleProvider;
+  }  else if (providerName === 'twitterProvider'){
+      return twitterProvider;
+  }
+}
 
 export const ERROR_CODE_ACCOUNT_EXISTS =
   'auth/account-exists-with-different-credential';

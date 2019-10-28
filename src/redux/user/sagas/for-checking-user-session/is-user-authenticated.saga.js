@@ -9,6 +9,7 @@ import {asyncFetchSnapshotFromUserAuth} from '../helper/async-fetch-snapshot-fro
 
 export function* isUserAuthenticated(){
     try {
+        console.log('attempting authentication');
         const userAuth = yield getCurrentUser();
         if(!userAuth) return;
         yield asyncFetchSnapshotFromUserAuth(userAuth);  

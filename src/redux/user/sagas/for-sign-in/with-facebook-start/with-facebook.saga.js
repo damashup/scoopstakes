@@ -4,6 +4,7 @@ import {asyncFetchSnapshotFromUserAuth} from '../../helper/async-fetch-snapshot-
 import {signInFailure} from '../../../actions/sign-in/failure/sign-in-failure.action';
 import {auth, facebookProvider} from '../../../../../firebase/firebase.utils';
 
+
 function* signInWithFacebook(){
     try {
         const {user} = yield auth.signInWithPopup(facebookProvider);
