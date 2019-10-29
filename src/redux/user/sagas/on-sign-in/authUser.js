@@ -1,12 +1,10 @@
 import {put, call} from 'redux-saga/effects';
 
-
-import {signInSuccess} from '../../actions/sign-in/success/sign-in-success.action';
-import {signInFailure} from '../../actions/sign-in/failure/sign-in-failure.action';
+import {signInSuccess, signInFailure, signInMethodsSuccess, signInMethodsFailure} from '../../actions/check-user-session/check-user-session'
 
 import {createUserProfileDocument} from '../../../../firebase/firebase.utils';
 
-export function* asyncFetchSnapshotFromUserAuth(userAuth, additionalData) {
+export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     try {
       console.log(additionalData)
       const userRef = yield call(
@@ -14,11 +12,18 @@ export function* asyncFetchSnapshotFromUserAuth(userAuth, additionalData) {
         userAuth,
         additionalData
       );
-      console.log(userRef)
       const userSnapshot = yield userRef.get();
       yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
-      return userRef;
     } catch (error) {
       yield put(signInFailure(error));
     }
-}
+  }
+
+  export function* updateActiveProvidersInSnapshot(providers){
+    try {
+      console.log(providers)
+      yield put(signInMethodsSuccess(providers))
+    }catch(error) {
+      yield put(signInMethodsFailure(error));
+    }
+  }

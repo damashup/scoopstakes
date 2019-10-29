@@ -6,7 +6,7 @@ Up Next:
 ### v0.4.0 - Play Now page, Twitter & Github sign-in
 * (Sign In Page) - Sign-in with Twitter component
 * (Sign In Page) - Sign-in with Github component
-* (Play Now) - Play Now landing page
+
 
 Complete:
 ### v0.3.0 - Refactoring and redux testing added
@@ -147,12 +147,11 @@ The navigation directory and the Sign In component will be dynamic based on whet
 Users can sign in with either (a) email/ password (b) social media sign in authentication or (c) cryptocurrency wallet (e.g. 
 Steemconnect, Scatter etc).
 
-The Sign In will utilise Firebase, to enable users to have one account yet multiple ways of signing. Sign in methods will be linked to 
-accounts by the users email. The best method of linking cryptocurrency wallet users account to enable sign in will need to be investigated. It would be desirable to give users flexibility around cashing out, i.e for them to be able to specific a given address or account to send winnings to. Thus seperate to sign in, there will need to be a cash out portal. This will sit in the [user profile](#profile-landing-page-for-current-user) page.
+The Sign In will utilise Firebase, to enable users to have one account yet multiple ways of signing. Sign in methods will be linked to accounts by the users email. The best method of linking cryptocurrency wallet users account to enable sign in will need to be investigated. It would be desirable to give users flexibility around cashing out, i.e for them to be able to specific a given address or account to send winnings to. Thus seperate to sign in, there will need to be a cash out portal. This will sit in the [user profile](#profile-landing-page-for-current-user) page.
 
 A custom button will be used to submit the Sign In action
 
-The User State will be managed in Redux user folder
+The User State will be managed in Redux user folder.
 
 ### To build (WBS)
 * (Sign In Page) - Sign-in Page ADDED
@@ -275,13 +274,25 @@ The Sign Up will utilise Firebase and Signed up users will be stored on (and ret
 
 ### Description
 
- The Profile page will be where the currentUser can manage their account
+The Profile page will be where the currentUser can manage their account.
+
+(a) Account Details
+
+(b) Account Linking
+
+Users will be able to link their Social Accounts with their account. This is Firebase functionality.
+
+NB: Through testing I discovered that users can link Accounts that have different email addresses. This is acceptabl for this application provided a user is able to see (within the Link Account section) the email credentials of a given Linked Provider
+
+
 ### To build (WBS)
 * (Profile) - Profile page
 * (Profile) - Account details component
 * (Profile) - Link Accounts component
 * (Profile) - Wallet component
 * (Profile) - Cash Out component
+### Other to dos (WBS)
+* (Link Accounts) - display the currentUser's email credentials for each Linked Provider. Or retrict the linking to one email.
 
 <hr>
 

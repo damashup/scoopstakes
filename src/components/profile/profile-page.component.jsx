@@ -7,7 +7,7 @@ import LinkAccountsSectionContainer from './link-accounts-section/link-accounts-
 import {ProfilePageDiv} from './profile-page.styles';
 import { selectCurrentUser } from '../../redux/user/selectors/user.selectors';
 
-import {fetchSignInProvidersStart} from '../../redux/user/actions/fetch-sign-in-providers/fetch-sign-in-providers-start.action';
+import {fetchSignInProvidersStart} from '../../redux/user/actions/fetch-sign-in-providers/start/fetch-sign-in-providers-start.action';
 
 
 const ProfilePage = ({currentUser,signInProvidersStart}) => {

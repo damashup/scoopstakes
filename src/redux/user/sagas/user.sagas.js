@@ -7,10 +7,11 @@ import {onGoogleSignInStart} from './for-sign-in/with-google-start/with-google.s
 import {onTwitterSignInStart} from './for-sign-in/with-twitter-start/with-twitter.saga';
 import {onCheckUserSession} from './for-checking-user-session/is-user-authenticated.saga';
 import {onEmailSignInStart} from './for-sign-in/with-email-start/on-email-sign-in-start.saga';
-import {onSignUpStart} from './sign-up/sign-up-start.saga';
-import {onSignUpSuccess} from './sign-up/sign-up-success.saga';
+import {onSignUpStart} from './for-sign-up/sign-up-start.saga';
+import {onSignUpSuccess} from './for-sign-up/sign-up-success.saga';
 import {onFetchSignInProviders} from './for-fetching-sign-in-providers/on-fetch-sign-in-providers';
 import {onLinkProvider} from './for-linking-provider/on-link-provider'
+import {onUnlinkProvider} from './for-unlinking-provider/on-unlink-provider'
 
 export function* userSagas(){
     yield all([
@@ -24,6 +25,7 @@ export function* userSagas(){
         call(onSignUpSuccess),
         call(onCheckUserSession),
         call(onFetchSignInProviders),
-        call(onLinkProvider)
+        call(onLinkProvider),
+        call(onUnlinkProvider)
     ]);
 };

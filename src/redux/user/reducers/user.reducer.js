@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     currentUser: null,
     isFetching: false,
     error: null,
-    providers: null,
+    providers: null
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {

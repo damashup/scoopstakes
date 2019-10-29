@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import {checkUserSession} from './redux/user/actions/user.actions';
+import {checkUserSession} from './redux/user/actions/check-user-session/check-user-session';
 
 
 import './App.scss';

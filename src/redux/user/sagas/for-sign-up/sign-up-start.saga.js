@@ -1,7 +1,8 @@
 import {takeLatest, put} from 'redux-saga/effects';
 import UserActionTypes from '../../types/user.types';
 
-import {signUpSuccess, signUpFailure} from '../../actions/user.actions';
+import {signUpFailure} from '../../actions/sign-up/failure/sign-up-failure.action';
+import {signUpSuccess} from '../../actions/sign-up/success/sign-up-success.action';
 
 import {auth} from '../../../../firebase/firebase.utils';
 

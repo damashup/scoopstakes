@@ -3,8 +3,8 @@ import {put} from 'redux-saga/effects';
 
 import {auth} from '../../../../firebase/firebase.utils';
 import {isUserAuthenticated} from '../for-checking-user-session/is-user-authenticated.saga'
-import { fetchSignInProvidersSuccess } from '../../actions/fetch-sign-in-providers/fetch-sign-in-providers-success.action';
-import { fetchSignInProvidersFailure } from '../../actions/fetch-sign-in-providers/fetch-sign-in-providers-failure.action';
+import { fetchSignInProvidersSuccess } from '../../actions/fetch-sign-in-providers/success/fetch-sign-in-providers-success.action';
+import { fetchSignInProvidersFailure } from '../../actions/fetch-sign-in-providers/failure/fetch-sign-in-providers-failure.action';
 
 export function* asyncFetchSignInProviders(){
     try {
