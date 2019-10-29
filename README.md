@@ -3,12 +3,12 @@
 # Pre-Releases (development tracking)
 
 Up Next:
-### v0.4.0 - Play Now page, Twitter & Github sign-in
-* (Sign In Page) - Sign-in with Twitter component
-* (Sign In Page) - Sign-in with Github component
-
+### v0.7.0 - Leaderboard page
 
 Complete:
+### v0.6.0 - Play Now page
+### v0.5.0 - Linking & Unlinking Accounts
+### v0.4.0 - Twitter & Github, Facebook sign-in
 ### v0.3.0 - Refactoring and redux testing added
 ### v0.2.0 - Email/ Password Sign-in added
 ### v0.1.0 - Firebase and Google Sign-in added

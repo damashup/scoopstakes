@@ -5,7 +5,7 @@ import {checkUserSession} from './redux/user/actions/check-user-session/check-us
 
 
 import './App.scss';
-import MainPageContainer from './components/page-template/main-page/main-page.container';
+import MainPageContainer from './components/page-templates/main-page/main-page.container';
 
 const App = ({checkUserSession}) => {
 
