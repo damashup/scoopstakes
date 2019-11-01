@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components';
 
-import {facebookSignInStyles, 
+import {
+        emailSignInStyles,
+        facebookSignInStyles, 
         githubSignInStyles, 
         googleSignInStyles, 
         twitterSignInStyles
@@ -8,12 +10,13 @@ import {facebookSignInStyles,
 
 import {signUpStyles} from './sign-up-button-styles/sign-up-button-styles';
 
-import {signInMethodsStyles} from './login-management-styles/login-management.styles'
+import {signInMethodsStyles} from './login-management-styles/login-management.styles';
+
+import {leaderboardSelectorStyles} from './leaderboard-styles/leaderboard-selector.styles';
 
 import {
-        colorBlack,
-        colorPrimary, 
-        colorPrimaryShade,
+        buttonVanilla,
+        colorBlack
         } from '../../../page-styles/base-styles';
 
 
@@ -23,39 +26,33 @@ const getBespokeButtonStyles = props => {
     if(props.isFacebookSignIn){return facebookSignInStyles;}
     if(props.isGitHubSignIn){return githubSignInStyles;}
     if(props.isTwitterSignIn){return twitterSignInStyles;}
+    if(props.isEmailSignIn){return emailSignInStyles;}
     // Sign up Button propertes
     if(props.signup){return signUpStyles}
     // Login Mangement Buttonproperties:
     if(props.signInMethods){return signInMethodsStyles;}
+    // LeaderboardSelector
+    if(props.leaderboardSelector){return leaderboardSelectorStyles}
     // Default
     return vanillaStyles;
 }        
 
 // Default styles
 const vanillaStyles = css`
-    justify-content: center;
-    background-color: ${colorPrimary};
-    color: white;
-    &:hover {
-        background-color: ${colorPrimaryShade};
-        border: 1px solid ${colorPrimaryShade};
-      }
+    ${buttonVanilla}
 `;
 
 // Common Styles
 export const CustomButtonDiv = styled.button`
-    min-width: 275px;
     width: auto;
     margin: auto;
-    height: 50px;
     letter-spacing: 0.5px;
-    line-height: 50px;
+    //line-height: 50px;
     padding: 0 2rem 0 2rem;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: bolder;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     border: 1px solid ${colorBlack};
 

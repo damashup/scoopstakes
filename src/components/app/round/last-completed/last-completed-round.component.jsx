@@ -1,7 +1,7 @@
 import React from 'react'
 
 import WinnersListContainer from '../../leaderboard/winners-list/winners-list.container';
-import {WinnersItemHeader} from '../../leaderboard/winners-item/winners-item.component';
+import {WinnersItemHeader} from '../../leaderboard/top-of-table/winners-item/winners-item.component';
 
 import {
     DollarIcon,

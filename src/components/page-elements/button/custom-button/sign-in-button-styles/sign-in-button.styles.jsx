@@ -1,6 +1,7 @@
 import {css} from 'styled-components';
 
 import {
+        buttonVanilla,
         colorBlack,
         colorGreyLight1, 
         colorGoogleRedDark, 
@@ -9,11 +10,17 @@ import {
         colorFacebookBlueShade,
         colorTwitterBlue,
         colorTwitterBlueShade,
-        colorWhite
+        colorWhite,
+        signButtonWidthHeight
         } from '../../../../page-styles/base-styles';  
 
+export const emailSignInStyles = css`
+    ${signButtonWidthHeight}
+    ${buttonVanilla}
+`;      
 
 export const facebookSignInStyles = css`
+    ${signButtonWidthHeight}
     background-color: ${colorFacebookBlueShade};
     color: white;
     &:hover {
@@ -24,6 +31,7 @@ export const facebookSignInStyles = css`
 `;
 
 export const githubSignInStyles = css`
+    ${signButtonWidthHeight}
     background-color: ${colorWhite};
     color: ${colorBlack};
     
@@ -35,6 +43,7 @@ export const githubSignInStyles = css`
 `;
 
 export const googleSignInStyles = css`
+    ${signButtonWidthHeight}
     background-color: ${colorGoogleRedDark};
     color: white;
     &:hover {
@@ -45,6 +54,7 @@ export const googleSignInStyles = css`
 
 
 export const twitterSignInStyles = css`
+    ${signButtonWidthHeight}
     background-color: ${colorTwitterBlueShade};
     color: white;
     &:hover {

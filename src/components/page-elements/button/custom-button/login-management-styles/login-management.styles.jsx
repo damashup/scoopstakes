@@ -9,7 +9,6 @@ import {
         colorWhite,
         buttonDisabled
         } from '../../../../page-styles/base-styles';
-     
 
 const getSignInMethodStatus = props => {
     // Sign In Button properties 
@@ -18,6 +17,7 @@ const getSignInMethodStatus = props => {
 }                
 
 export const signInMethodsStyles = css`
+    width: 275px;
     justify-content: center;
     text-transform: capitalize;
     ${getSignInMethodStatus}

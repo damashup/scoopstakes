@@ -3,27 +3,31 @@ import React from 'react';
 
 import TeamLogoContainer from '../../team/team-logo/team-logo.container';
 
-import './match-summary.styles.scss';
+import {
+    MatchSummaryDiv,
+    TeamDiv,
+    TeamTitleSpan,
+    VersusDiv
+    } from './match-summary.styles'
+
 
 const MatchSummary = ({ homeTeam, awayTeam }) => {
     
-    return (
-    
-      
+    return (    
 
-    <div className="match--summary">    
-        <div className='team'>
+    <MatchSummaryDiv>    
+        <TeamDiv>
             <TeamLogoContainer team={homeTeam}/>            
-            <span className="team__title">{homeTeam}</span>
-        </div>
+            <TeamTitleSpan>{homeTeam}</TeamTitleSpan>
+        </TeamDiv>
 
-        <div className="versus">v</div>
+        <VersusDiv>v</VersusDiv>
                 
-        <div className='team'>
-                <TeamLogoContainer team={awayTeam}/>                    
-            <span className="team__title">{awayTeam}</span>
-        </div>
-    </div>
+        <TeamDiv>
+            <TeamLogoContainer team={awayTeam}/>                    
+            <TeamTitleSpan>{awayTeam}</TeamTitleSpan>
+        </TeamDiv>
+    </MatchSummaryDiv>
 
 
 )}

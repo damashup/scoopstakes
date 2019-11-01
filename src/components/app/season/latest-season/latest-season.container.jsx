@@ -16,14 +16,14 @@ query LatestSeason($searchTerm: String){
   }
 `;
 
-const LatestSeasonContainer = ({getLeaderboardTopThree}) => {
+export const LatestSeasonContainer = (getLeaderboardTopThree) => {
 
     return (
         <Query query={LASTEST_SEASON } variables={{searchTerm: ''}}>
             {
                 ({loading, data}) => {       
                 if (loading) return <Spinner />;
-                if(getLeaderboardTopThree){ return <OverallLeaderboardContainer seasonId={data.latestSeason.year} topThree/>}
+                if(getLeaderboardTopThree){ return <OverallLeaderboardContainer seasonId={data.latestSeason} topThree/>}
                 return <LatestSeasonLeaderboard  season={data.latestSeason} />
                 }
             }

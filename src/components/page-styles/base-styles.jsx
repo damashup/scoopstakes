@@ -50,7 +50,14 @@ export const colorQuinaryDark = css`#28b485`;
 export const imageSignInWith = `
     max-height: 40px;
     max-width: 40px;
-    margin-right: 5px;
+    //margin-right: 5px;
+    margin: auto 5px auto 0;
+`;
+
+export const imageTeamLogoMedium = `
+    max-height: 80px;
+    max-width: 80px;
+    text-align: center;
 `;
 
 export const linkDefault = css`
@@ -79,6 +86,22 @@ export const buttonDisabled = css`
     color: ${colorGreyDisabledText};
 `
 
+export const buttonVanilla = `
+    justify-content: center;
+    background-color: ${colorPrimary};
+    color: white;
+    &:hover {
+        background-color: ${colorPrimaryShade};
+        border: 1px solid ${colorPrimaryShade};
+      }
+    &:focus {outline:0;}  
+`;
+
+export const signButtonWidthHeight = css`
+    line-height: 50px;
+    width: 300px;
+`;  
+
 export const profileHeader = css`
     font-weight: bold;
     font-size: 250%;
@@ -98,3 +121,20 @@ export const gradientDarkBlue = css`rgba(6, 6, 226, 0.75), rgba(2, 2, 77, 0.75))
 export const gradientOrange = css`#ffb900, #ff7730`;
 export const gradientPurple1 = css`linear-gradient(to right bottom, #bf55ec, #d692f3)`;
 export const gradientPurple2 = css`linear-gradient(to right bottom, #8e44ad, #d6b8e3)`;
+
+export const pageTitleStyle = css`
+    margin-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: ${colorPrimaryDark};
+`;
+
+export const pageNoticeStyle = css`
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 0.2rem solid ${colorGreyLight2};
+    background-color: ${colorGreyLight1};
+    text-align: center;
+    //width: 50%;
+    color: ${colorPrimaryDark};
+`;

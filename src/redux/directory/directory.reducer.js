@@ -6,9 +6,9 @@ const INITIAL_STATE =  {
           linkUrl: "play"
         },
         {
-          title: "Leaderboard",
+          title: "Leaderboards",
           id: 2,
-          linkUrl: "leaderboard"
+          linkUrl: "leaderboards"
         },
         {
           title: "Results",

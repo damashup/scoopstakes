@@ -2,9 +2,9 @@ import React from "react";
 
 import CustomSplash from '../../page-elements/splash/custom-splash/custom-splash.component';
 import LastCompletedRoundContainer from '../../app/round/last-completed/last-completed-round.container';
-import LatestSeasonContainer from '../../app/season/latest-season/latest-season.container';
-import NextRoundContainer from '../../app/round/next-round/next-round.container';
-
+//import LatestSeasonContainer from '../../app/season/latest-season/latest-season.container';
+import NextRoundContainer from '../../app/round/next/next-round.container';
+import SeasonResultsContainer from '../../app/season/results/season-results.container';
 
 
 import {
@@ -38,7 +38,7 @@ const PlayNowPage = () => {
         <LastCompletedRoundContainer />
 
         <PlayNowLatestSeasonLeaderboardGrid>  
-          <LatestSeasonContainer />
+          <SeasonResultsContainer seasonId='1819' topOfTheTable/>
         </PlayNowLatestSeasonLeaderboardGrid>
         
 

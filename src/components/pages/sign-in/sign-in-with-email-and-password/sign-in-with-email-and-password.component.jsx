@@ -55,7 +55,7 @@ const SignInWithEmailPassword = ({ emailSignInStart }) => {
           required
         />
 
-        <CustomButton type="submit">Sign in</CustomButton>
+        <CustomButton type="submit" isEmailSignIn>Sign in</CustomButton>
       </form>
 
       <SignInTextDiv>
