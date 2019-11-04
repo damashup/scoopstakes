@@ -3,15 +3,6 @@ import React from 'react'
 import {
     SingleResultSummaryDiv,
     SingleResultSummaryHeader,
-    SingleResultSummaryDetails,
-    SingleResultSummaryLink,
-    RoundDiv,
-    RoundCTADiv,
-    RoundDeadlineDate,
-    RoundDeadlineTime, 
-    RoundDetails, 
-    RoundInfo,
-    RoundNumber
 } from './single-result-summary.styles';
 
 const SingleResultSummary = ({roundResults, round, entrant}) => {
@@ -25,26 +16,7 @@ const SingleResultSummary = ({roundResults, round, entrant}) => {
         <SingleResultSummaryDiv>
             <SingleResultSummaryHeader>Round {round}</SingleResultSummaryHeader>
         
-        <RoundDetails>
-
-            <RoundDeadlineDate>
-
-            </RoundDeadlineDate>
-
-            <RoundInfo>
-            
-            </RoundInfo>
-
-        </RoundDetails>
-
-
-            <RoundCTADiv>
-                See Results
-            </RoundCTADiv>
-
-        
   
-
 
     </SingleResultSummaryDiv>
     )

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { summaryBox, colorPrimary,
-    colorPrimaryDark, 
+import { summaryBox, 
+    colorPrimary,
     colorWhite } from "../../../page-styles/base-styles";
 
 export const SingleResultSummaryDiv = styled.div`

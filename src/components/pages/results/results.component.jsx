@@ -1,25 +1,34 @@
 import React from 'react'
 import PageTitle from '../../page-elements/page-title/page-title.component';
 
-import {ResultsPageDiv, ResultsTitle, ResultsSummary} from './results.styles'
-import NextRoundContainer from '../../app/round/next/next-round.container'
-import LastCompletedRoundContainer from '../../app/round/last-completed/last-completed-round.container';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+
+import {ResultsPageDiv, ResultsTitle} from './results.styles'
+import AllRoundsContainer from '../../app/round/all-rounds/all-rounds.container';
 
 const ResultsPage = () => {
     const title = 'Results and Schedule';
-    const entrant = 'nanzo-scoop'
     return (
         <ResultsPageDiv>
 
-            <ResultsTitle>
-                <PageTitle title={title} />
-                
-            </ResultsTitle>
+        <Container maxWidth="lg">
+          <Grid container spacing={3}>
 
-            <ResultsSummary>
-                <NextRoundContainer summary/>
-                <LastCompletedRoundContainer singleResultSummary entrant={entrant}/>
-            </ResultsSummary>    
+            <ResultsTitle>
+                <PageTitle title={title} />  
+            </ResultsTitle>
+                    
+            <Grid item xs={12}>
+              <Paper>
+                <AllRoundsContainer list />
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+
+  
         </ResultsPageDiv>
     )
 }

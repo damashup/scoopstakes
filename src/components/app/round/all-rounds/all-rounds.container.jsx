@@ -5,6 +5,8 @@ import {gql} from 'apollo-boost';
 import Spinner from '../../../page-elements/spinner/app-spinner/spinner.component';
 import RoundNumberSelector from '../../leaderboard/selectors/number/round/round_number-selector.component';
 
+import AllRoundsList from './all-rounds-list.component';
+
 const ALL_ROUNDS = gql`
     query allRounds($searchTerm: String){
         allRounds(searchTerm: $searchTerm){
@@ -14,19 +16,21 @@ const ALL_ROUNDS = gql`
             round_img_url
             round_no
             scores
-            season  
+            season
+            deadline_time  
           }
   }
 `;
 
-const AllRoundsContainer = ({leaderboardSelector}) => {
+const AllRoundsContainer = ({leaderboardSelector, list}) => {
 
     return (
         <Query query={ALL_ROUNDS} variables={{searchTerm: ''}}>
             {
                 ({loading, data}) => {       
                 if (loading) return <Spinner />;
-                if(leaderboardSelector) return <RoundNumberSelector allRounds={data.allRounds} />
+                if(leaderboardSelector) return <RoundNumberSelector allRounds={data.allRounds} />;
+                if(list) return <AllRoundsList allRounds={data.allRounds} />;
                 }
             }
         </Query>

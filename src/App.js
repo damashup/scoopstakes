@@ -5,7 +5,11 @@ import {checkUserSession} from './redux/user/actions/check-user-session/check-us
 
 
 import './App.scss';
-import MainPageContainer from './components/page-templates/main-page/main-page.container';
+// import MainPageContainer from './components/page-templates/main-page/main-page.container';
+import {Main} from './layouts'
+
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme';
 
 const App = ({checkUserSession}) => {
 
@@ -13,7 +17,11 @@ const App = ({checkUserSession}) => {
   
     return (
       <div className="App">
-      <MainPageContainer />
+        <ThemeProvider theme={theme}>
+            {/* <MainPageContainer /> */}
+            <Main />
+        </ThemeProvider>
+      
   
       </div>
     );

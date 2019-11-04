@@ -21,7 +21,6 @@ import {
 const Header = ({currentUser, signOutStart}) => {
 
     return (
-
       <HeaderDiv>
         <HeaderLogoLink to='/'>
           <HeaderLogo /> 
@@ -35,10 +34,6 @@ const Header = ({currentUser, signOutStart}) => {
           
           : 
           <SignInLink to='/signin'>SIGN IN </SignInLink>}
-        
-        
-          
-        
       </HeaderDiv>
       )
   

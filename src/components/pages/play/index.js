@@ -1,0 +1,1 @@
+export { default } from './play-now-page.component';
