@@ -4,8 +4,8 @@ import CustomButton from '../../../page-elements/button/custom-button/custom-but
 import MatchSummary from '../../fixtures/match-summary/match-summary.component';
 
 import {
-    NextRoundContainer,
-    NextRoundCTAContainer, 
+    NextRoundDiv,
+    NextRoundCTADiv, 
     } from './next-round.styles';
 
 const NextRound = ({nextRound}) => {
@@ -20,16 +20,16 @@ const NextRound = ({nextRound}) => {
                     {id: `${uid}05`, homeTeam: nextRound[0].teams[8], awayTeam: nextRound[0].teams[9]}
                     ];          
     return (
-        <NextRoundContainer>
+        <NextRoundDiv>
             
             {games.map(({ id, ...otherGameProps }) => (<MatchSummary key={id} {...otherGameProps} /> ))};
 
-            <NextRoundCTAContainer>
+            <NextRoundCTADiv>
                 <CustomButton cta>Play Now</CustomButton>
-            </NextRoundCTAContainer>    
+            </NextRoundCTADiv>    
 
 
-        </NextRoundContainer>
+        </NextRoundDiv>
 
             
     )

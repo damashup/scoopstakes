@@ -12,6 +12,8 @@ import PlayNowPage from '../../pages/play-now/play-now-page.component';
 import ProfilePage from '../../pages/profile/profile-page.component';
 import SignInPage from '../../pages/sign-in/sign-in-page.component';
 import SignUpPage from '../../pages/sign-up/sign-up-page.component';
+import ResultsPage from '../../pages/results/results.component';
+
 
 const MainPage = ({currentUser}) => (
       <div>
@@ -21,6 +23,7 @@ const MainPage = ({currentUser}) => (
           <Route exact path='/leaderboards' component={LeaderboardsPage} />
           <Route exact path='/play' component={PlayNowPage} />
           <Route exact path='/profile' component={ProfilePage} />
+          <Route exact path='/results' render={() => currentUser ? <ResultsPage /> : <SignInPage />} />
           <Route exact path='/signin' render={() => currentUser ? <Redirect to='/profile' />: <SignInPage />} />
           <Route exact path='/signup' render={() => currentUser ? <Redirect to='/profile' />: <SignUpPage />} />
         </Switch>

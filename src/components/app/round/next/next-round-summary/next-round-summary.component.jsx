@@ -2,7 +2,7 @@ import React from 'react'
 import RoundSummary from '../../summary/round-summary.component';
 
 import {
-    NextRoundSummaryContainer
+    NextRoundSummaryDiv
     } from '../next-round.styles';
 
 const NextRoundSummary = ({nextRound}) => {
@@ -11,9 +11,9 @@ const NextRoundSummary = ({nextRound}) => {
     const title = 'Next Round'
 
     return (
-    <NextRoundSummaryContainer>
+    <NextRoundSummaryDiv>
         <RoundSummary title={title} deadlineDate={deadlineDate} round_no={round_no} cta/>  
-    </NextRoundSummaryContainer>   
+    </NextRoundSummaryDiv>   
     
     )
 }

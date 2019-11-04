@@ -5,8 +5,8 @@ import Moment from 'react-moment';
 import CustomButton from '../../../page-elements/button/custom-button/custom-button.component';
 
 import {
-    RoundContainer,
-    RoundCTAContainer,
+    RoundDiv,
+    RoundCTADiv,
     RoundDeadlineDate,
     RoundDeadlineTime, 
     RoundDetails, 
@@ -16,7 +16,7 @@ import {
     } from './round-summary.styles';
 
 const RoundSummary = ({title, deadlineDate, round_no, cta}) => (
-    <RoundContainer>
+    <RoundDiv>
 
         <RoundHeader>{title}</RoundHeader>
         
@@ -36,15 +36,15 @@ const RoundSummary = ({title, deadlineDate, round_no, cta}) => (
         </RoundDetails>
 
         {cta ?
-            <RoundCTAContainer>
+            <RoundCTADiv>
                 <CustomButton cta>Play Now</CustomButton>
-            </RoundCTAContainer>
+            </RoundCTADiv>
         : null}
         
   
 
 
-    </RoundContainer>
+    </RoundDiv>
 
         
 )

@@ -1,8 +1,15 @@
-import styled from 'styled-components';
-import {
-    colorPrimary,
+import styled from "styled-components";
+
+import { summaryBox, colorPrimary,
     colorPrimaryDark, 
-    colorWhite} from '../../../page-styles/base-styles';
+    colorWhite } from "../../../page-styles/base-styles";
+
+export const SingleResultSummaryDiv = styled.div`
+  ${summaryBox}
+`;
+
+export const SingleResultSummaryDetails = styled.div``;
+export const SingleResultSummaryLink = styled.div``;
 
 
 export const RoundDiv = styled.div`
@@ -11,8 +18,8 @@ export const RoundDiv = styled.div`
 
 `;
 
-        export const RoundHeader = styled.div`
-            background-color: ${colorPrimaryDark};
+        export const SingleResultSummaryHeader = styled.div`
+            background-color: ${colorPrimary};
             color: ${colorWhite};
             font-weight: bold;
             font-size: 2rem;

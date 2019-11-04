@@ -40,6 +40,8 @@ const getBespokeButtonStyles = props => {
 // Default styles
 const vanillaStyles = css`
     ${buttonVanilla}
+    line-height: 50px;
+    border-radius: 10px;
 `;
 
 // Common Styles
@@ -47,7 +49,6 @@ export const CustomButtonDiv = styled.button`
     width: auto;
     margin: auto;
     letter-spacing: 0.5px;
-    //line-height: 50px;
     padding: 0 2rem 0 2rem;
     font-size: 15px;
     text-transform: uppercase;

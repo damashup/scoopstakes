@@ -6,7 +6,7 @@ import {
     colorWhite} from '../../../page-styles/base-styles';
 
 
-export const NextRoundContainer = styled.div`
+export const NextRoundDiv = styled.div`
     background-color: ${colorWhite};
 `;
 
@@ -72,7 +72,7 @@ export const NextRoundDeadlineTime = styled.div`
 
 `;
 
-export const NextRoundCTAContainer = styled.div`
+export const NextRoundCTADiv = styled.div`
     padding: 2rem;
     display: flex;
     align-item: center;
@@ -80,6 +80,6 @@ export const NextRoundCTAContainer = styled.div`
 
 `;
 
-export const NextRoundSummaryContainer = styled.div`
+export const NextRoundSummaryDiv= styled.div`
 
 `;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import WinnersListContainer from '../../leaderboard/winners-list/winners-list.container';
+import WinnersListContainer from '../../leaderboard/top-of-table/winners-list/winners-list.container';
 import {WinnersItemHeader} from '../../leaderboard/top-of-table/winners-item/winners-item.component';
 
 import {

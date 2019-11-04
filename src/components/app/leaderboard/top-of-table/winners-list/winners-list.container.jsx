@@ -4,7 +4,7 @@ import {gql} from 'apollo-boost';
 
 import WinnersList from './winners-list.component';
 
-import Spinner from '../../../page-elements/spinner/app-spinner/spinner.component';
+import Spinner from '../../../../page-elements/spinner/app-spinner/spinner.component';
 
 const LAST_COMPLETED_ROUND = gql`
 

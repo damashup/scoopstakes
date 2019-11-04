@@ -138,3 +138,9 @@ export const pageNoticeStyle = css`
     //width: 50%;
     color: ${colorPrimaryDark};
 `;
+
+export const summaryBox = css`
+      width: 75rem;
+      background-color: ${colorPrimary};
+
+`;

@@ -1,5 +1,5 @@
 import React from 'react'
-import WinnersItem from '../overall/winners-item/winners-item.component';
+import WinnersItem from '../winners-item/winners-item.component';
 
 const WinnersList = ({roundResults}) => {
 

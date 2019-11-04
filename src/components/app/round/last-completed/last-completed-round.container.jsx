@@ -23,16 +23,15 @@ const LAST_COMPLETED_ROUND = gql`
   }
 `;
 
-const LastCompletedRoundContainer = ({leaderboard}) => {
-
+const LastCompletedRoundContainer = ({leaderboard, singleResultSummary, entrant}) => {
+    console.log(singleResultSummary, entrant)
     return (
         <Query query={LAST_COMPLETED_ROUND } variables={{searchTerm: ''}}>
             {
                 ({loading, data}) => {       
                 if (loading) return <Spinner />;
-                if (leaderboard){
-                    return <RoundResultsContainer roundId={data.lastCompletedRound.uid} />
-                }
+                if (leaderboard){return <RoundResultsContainer roundId={data.lastCompletedRound[0].uid} />}
+                if (singleResultSummary){return <RoundResultsContainer roundId={data.lastCompletedRound[0].uid} entrant={entrant} />}
                 return <LastCompletedRound lastCompletedRound={data.lastCompletedRound}/>
                 }
             }

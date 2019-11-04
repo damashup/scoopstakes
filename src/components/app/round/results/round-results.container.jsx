@@ -4,6 +4,7 @@ import {gql} from 'apollo-boost';
 
 import Spinner from '../../../page-elements/spinner/app-spinner/spinner.component';
 import Leaderboard from '../../leaderboard/leaderboard.component';
+import SingleResultSummary from '../../result/single-result-summary/single-result-summary.component';
 
 const ROUND_RESULTS = gql`
     query roundResults($round_id: String){
@@ -20,14 +21,14 @@ const ROUND_RESULTS = gql`
   }
 `;
 
-const RoundResultsContainer = ({roundId, leaderboard}) => {
-
+const RoundResultsContainer = ({roundId, leaderboard, entrant}) => {
     return (
         <Query query={ROUND_RESULTS } variables={{round_id: roundId}}>
             {
                 ({loading, data}) => {       
                 if (loading) return <Spinner />;
                 if(leaderboard) return <Leaderboard roundResults={data.roundResults} round={roundId}/>
+                if(entrant)return <SingleResultSummary roundResults={data.roundResults} round={roundId} entrant={entrant} />
                 }
             }
         </Query>
