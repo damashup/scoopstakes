@@ -6,6 +6,7 @@ import Spinner from '../../../page-elements/spinner/app-spinner/spinner.componen
 import RoundNumberSelector from '../../leaderboard/selectors/number/round/round_number-selector.component';
 
 import AllRoundsList from './all-rounds-list.component';
+import ChallengeNanzoTabPanel from '../../nanzo/challenge-nanzo-tab-panel'
 
 const ALL_ROUNDS = gql`
     query allRounds($searchTerm: String){
@@ -22,7 +23,7 @@ const ALL_ROUNDS = gql`
   }
 `;
 
-const AllRoundsContainer = ({leaderboardSelector, list}) => {
+const AllRoundsContainer = ({leaderboardSelector, list, nanzo}) => {
 
     return (
         <Query query={ALL_ROUNDS} variables={{searchTerm: ''}}>
@@ -31,6 +32,7 @@ const AllRoundsContainer = ({leaderboardSelector, list}) => {
                 if (loading) return <Spinner />;
                 if(leaderboardSelector) return <RoundNumberSelector allRounds={data.allRounds} />;
                 if(list) return <AllRoundsList allRounds={data.allRounds} />;
+                if(nanzo) return <ChallengeNanzoTabPanel allRounds={data.allRounds} />;
                 }
             }
         </Query>

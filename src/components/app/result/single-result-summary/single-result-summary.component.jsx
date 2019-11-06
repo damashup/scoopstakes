@@ -1,25 +1,14 @@
 import React from 'react'
 
-import {
-    SingleResultSummaryDiv,
-    SingleResultSummaryHeader,
-} from './single-result-summary.styles';
+import VersusNanzo from './views/VersusNanzo';
 
-const SingleResultSummary = ({roundResults, round, entrant}) => {
-    console.log(roundResults);
-    console.log(entrant);
-    const entrantRound = roundResults.filter(result => result.steem_entrant === entrant);
-    console.log(entrantRound);
-    console.log(round);
 
-    return (
-        <SingleResultSummaryDiv>
-            <SingleResultSummaryHeader>Round {round}</SingleResultSummaryHeader>
-        
-  
-
-    </SingleResultSummaryDiv>
-    )
+const SingleResultSummary = ({roundResults, entrant, nanzoTab, roundId}) => {
+    const entrantResult = roundResults.filter(result => result.steem_entrant === entrant);
+    const nanzoResult = roundResults.filter(result => result.steem_entrant === 'nanzo-scoop');
+ 
+    if(nanzoTab)return <VersusNanzo entrantResult={entrantResult[0]} nanzoResult={nanzoResult[0]} roundId={roundId}/>
+    return
 }
 
 export default SingleResultSummary;

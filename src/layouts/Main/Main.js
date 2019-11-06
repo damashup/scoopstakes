@@ -14,6 +14,7 @@ import { Sidebar, Topbar, Footer } from './components';
 
 // import pages
 import {Leaderboards, Play, Profile, Results, SignIn, SignUp } from '../../components/pages';
+import ChallengeNanzoPage from '../../components/pages/challenge-nanzo/challenge-nanzo.component';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,6 +70,7 @@ const Main = props => {
       />
       <main className={classes.content}>
       <Switch>
+          <Route exact path='/challenge-nanzo' component={ChallengeNanzoPage} />
           <Route exact path='/leaderboards' component={Leaderboards} />
           <Route exact path='/play' component={Play} />
           <Route exact path='/profile' component={Profile} />

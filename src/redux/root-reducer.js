@@ -8,6 +8,7 @@ import userReducer from './user/reducers/user.reducer';
 import signInMethodsReducer from './sign-in-methods/sign-in-methods.reducer';
 import leaderboardReducer from './leaderboard/reducer/leaderboard.reducer';
 import seasonReducer from './season/reducer/seasonReducer';
+import challengeNanzoReducer from './challenge-nanzo/reducer/challenge-nanzo.reducer';
 
 const persistConfig = {
   key: 'root',
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   directory: directoryReducer,
   user: userReducer,
   leaderboard: leaderboardReducer,
-  season: seasonReducer
+  season: seasonReducer,
+  challengeNanzo: challengeNanzoReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);

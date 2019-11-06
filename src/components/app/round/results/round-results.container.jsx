@@ -21,14 +21,14 @@ const ROUND_RESULTS = gql`
   }
 `;
 
-const RoundResultsContainer = ({roundId, leaderboard, entrant}) => {
+const RoundResultsContainer = ({roundId, leaderboard, entrant, nanzoTab}) => {
     return (
         <Query query={ROUND_RESULTS } variables={{round_id: roundId}}>
             {
                 ({loading, data}) => {       
                 if (loading) return <Spinner />;
                 if(leaderboard) return <Leaderboard roundResults={data.roundResults} round={roundId}/>
-                if(entrant)return <SingleResultSummary roundResults={data.roundResults} round={roundId} entrant={entrant} />
+                if(entrant)return <SingleResultSummary roundResults={data.roundResults} roundId={roundId} entrant={entrant} nanzoTab />
                 }
             }
         </Query>
