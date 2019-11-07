@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import red from '@material-ui/core/colors/red';
 import lightGreen from '@material-ui/core/colors/lightGreen';
-import { colorPrimaryDark, colorWhite} from '../../../../../page-styles/base-styles';
+import { colorPrimaryDark, colorWhite} from '../../../page-styles/base-styles';
 
 
 // material-ui

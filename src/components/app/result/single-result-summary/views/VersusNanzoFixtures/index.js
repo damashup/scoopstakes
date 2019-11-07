@@ -1,1 +1,0 @@
-export { default } from './versus-nanzo-fixtures.component';

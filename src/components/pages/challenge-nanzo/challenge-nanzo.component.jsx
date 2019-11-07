@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 
 import {ChallengeNanzoPageDiv} from './challenge-nanzo.styles'
 import AllRoundsContainer from '../../app/round/all-rounds/all-rounds.container';
+import NanzoTab from '../../app/nanzo/tab';
 
 const ChallengeNanzoPage = () => {
     const title = 'Challenge Nanzo';
@@ -17,11 +18,11 @@ const ChallengeNanzoPage = () => {
           <Grid container spacing={3}>
 
 
-                <PageTitle title={title} />  
+            <PageTitle title={title} />  
                     
             <Grid item xs={12}>
               <Paper>
-                <AllRoundsContainer nanzo />
+                <NanzoTab />
               </Paper>
             </Grid>
           </Grid>

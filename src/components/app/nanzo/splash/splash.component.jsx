@@ -1,18 +1,19 @@
 import React from 'react';
-
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
+import Fixtures from '../fixtures';
 
-import VersusNanzoFixtures from '../VersusNanzoFixtures';
+// import VersusNanzoFixtures from '../VersusNanzoFixtures';
 
-import {useStyles, PaperDiv, TypographyHeader, HeaderRow, VersusAvatar, TypographyHeaderNotEntered} from './versus-nanzo.styles';
+import {useStyles, PaperDiv, TypographyHeader, HeaderRow, VersusAvatar, TypographyHeaderNotEntered} from './splash.styles';
 
-const VersusNanzo = ({entrantResult, nanzoResult, roundId}) => {
+const Splash = ({entrantResult, nanzoResult, roundId, round, entrant}) => {
     const classes = useStyles();
     const nanzoPoints = nanzoResult ? nanzoResult.total_points : -1 ;
+    const {teams, scores} = round ? round : null;
 
     if(!entrantResult) return(
         <PaperDiv>
@@ -71,15 +72,15 @@ const VersusNanzo = ({entrantResult, nanzoResult, roundId}) => {
                     </TypographyHeader>   
                 </HeaderRow>
 
-                <VersusNanzoFixtures roundId={roundId} entrant={entrantResult.steem_entrant}/>                
 
             </PaperDiv>
+            <Fixtures roundId={roundId} entrant={entrant} teams={round.teams} scores={round.scores} nanzoResult={nanzoResult} entrantResult={entrantResult}/>
         </div>
         )
     
 }
 
-export default VersusNanzo;
+export default Splash;
 
 // first_goal_diff: -4
 // id: "f36055b1-ffd3-11e9-91bb-9b2d552655ef"
