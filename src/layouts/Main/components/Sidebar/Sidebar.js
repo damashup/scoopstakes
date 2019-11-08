@@ -5,7 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Divider, Drawer } from '@material-ui/core';
 
 
-import { Profile, SidebarNav, UpgradePlan } from './components';
+import { Profile, 
+        SidebarNav, 
+        // UpgradePlan 
+      } from './components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {

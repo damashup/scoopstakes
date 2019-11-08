@@ -1,17 +1,9 @@
 import React from 'react';
-import { useStyles, TeamLogoAvatar, TeamBox } from './nanzo-fixture-item.styles';
-
-
+import { useStyles, TeamBox } from './nanzo-fixture-item.styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
-import red from '@material-ui/core/colors/red';
 import Box from '@material-ui/core/Box';
 import TeamLogoContainer from '../../team/team-logo/team-logo.container';
-
-const win = red[500]; // #F44336
 
 export default function NanzoFixtureItem({
   homeTeam,
@@ -45,8 +37,7 @@ export default function NanzoFixtureItem({
             <Grid container className={`${classes.root}`} spacing={2}>
                 <Grid item xs={2}><TeamLogoContainer team={homeTeam} avatar/></Grid>
                 <Grid item xs={3}><Paper className={classes.paperRight} elevation={0}><TeamBox fontWeight="fontWeightBold">{homeTeam}</TeamBox></Paper></Grid>
-                <Grid item xs={2}>
-                    
+                <Grid item xs={2}>                   
                     <Paper className={classes.paperRes} elevation={1}>
                         <Grid container className={classes.root}>
                             <Grid item xs={5}>
@@ -71,7 +62,7 @@ export default function NanzoFixtureItem({
                 <Grid item xs={2}><TeamLogoContainer team={awayTeam} avatar/></Grid>
             </Grid>
             <Grid container className={classes.root} spacing={2}>
-                <Grid item xs={5}><Paper className={classes.paperRight} elevation={0}>You</Paper></Grid>
+                <Grid item xs={5}><Paper className={classes.paperRight} elevation={0}>Your prediction</Paper></Grid>
                 <Grid item xs={2}>
                         <Grid container className={classes.root}>
                             <Grid item xs={4}><Paper elevation={1}>{entrantHtGuess}</Paper></Grid>    
@@ -86,7 +77,7 @@ export default function NanzoFixtureItem({
                 </Grid>
             </Grid>
             <Grid container className={classes.root} spacing={2}>
-                <Grid item xs={5}><Paper className={classes.paperRight} elevation={0}>Nanzo</Paper></Grid>
+                <Grid item xs={5}><Paper className={classes.paperRight} elevation={0}>Nanzo's prediction</Paper></Grid>
                 <Grid item xs={2}>
                         <Grid container className={classes.root}>
                             <Grid item xs={4}><Paper elevation={1}>{nanzoHtGuess}</Paper></Grid>    

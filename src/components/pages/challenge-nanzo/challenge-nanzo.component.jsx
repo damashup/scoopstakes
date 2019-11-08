@@ -7,7 +7,6 @@ import PageTitle from '../../page-elements/page-title/page-title.component';
 import Container from '@material-ui/core/Container';
 import {ChallengeNanzoPageDiv} from './challenge-nanzo.styles';
 import NanzoTab from '../../app/nanzo/tab';
-import SplashNumber from '../../app/nanzo/splash-number';
 import { selectCurrentUser } from '../../../redux/user/selectors/user.selectors';
 
 const ChallengeNanzoPage = ({match}) => {

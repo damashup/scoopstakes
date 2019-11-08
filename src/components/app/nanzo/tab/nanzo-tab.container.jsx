@@ -18,6 +18,7 @@ const ROUND = gql`
             teams
             scores
             season
+            round_status
           }
   }
 `;
