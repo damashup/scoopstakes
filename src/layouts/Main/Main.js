@@ -71,6 +71,9 @@ const Main = props => {
       <main className={classes.content}>
       <Switch>
           <Route exact path='/challenge-nanzo' component={ChallengeNanzoPage} />
+          <Route path='/challenge-nanzo/:challengeNanzoRoundId' component={ChallengeNanzoPage} />
+          {/* <Route exact path={`${match.path}`}  component={ChallengeNanzoPage} />    
+            <Route path={`${match.path}/:challengeNanzoRoundId`} component={ChallengeNanzoPage} /> */}
           <Route exact path='/leaderboards' component={Leaderboards} />
           <Route exact path='/play' component={Play} />
           <Route exact path='/profile' component={Profile} />

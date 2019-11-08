@@ -82,11 +82,3 @@ const Splash = ({entrantResult, nanzoResult, roundId, round, entrant}) => {
 
 export default Splash;
 
-// first_goal_diff: -4
-// id: "f36055b1-ffd3-11e9-91bb-9b2d552655ef"
-// points_list: (5) ["0", "0", "1", "0", "1"]
-// reputation_score: "73.28"
-// round_position: "200"
-// sbd_payout: null
-// steem_entrant: "nanzo-scoop"
-// total_points: 2

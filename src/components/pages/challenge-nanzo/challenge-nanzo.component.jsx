@@ -1,36 +1,31 @@
-import React from 'react'
+import React from 'react';
+import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+
 import PageTitle from '../../page-elements/page-title/page-title.component';
 
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-
-import {ChallengeNanzoPageDiv} from './challenge-nanzo.styles'
-import AllRoundsContainer from '../../app/round/all-rounds/all-rounds.container';
+import {ChallengeNanzoPageDiv} from './challenge-nanzo.styles';
 import NanzoTab from '../../app/nanzo/tab';
+import SplashNumber from '../../app/nanzo/splash-number';
+import { selectCurrentUser } from '../../../redux/user/selectors/user.selectors';
 
-const ChallengeNanzoPage = () => {
+const ChallengeNanzoPage = ({match}) => {
     const title = 'Challenge Nanzo';
+    console.log(match)
+    console.log(match.params.challengeNanzoRoundId)
     return (
         <ChallengeNanzoPageDiv>
-
-        <Container maxWidth="lg">
-          <Grid container spacing={3}>
-
-
-            <PageTitle title={title} />  
-                    
-            <Grid item xs={12}>
-              <Paper>
-                <NanzoTab />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container>
-
-  
+          <Container maxWidth="lg">
+            <PageTitle title={title} />
+            <NanzoTab roundId={match.params.challengeNanzoRoundId}/>
+          </Container>
         </ChallengeNanzoPageDiv>
     )
 }
 
-export default ChallengeNanzoPage;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+})
+
+export default connect(mapStateToProps)(ChallengeNanzoPage);

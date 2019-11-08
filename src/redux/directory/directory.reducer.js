@@ -15,7 +15,7 @@ const INITIAL_STATE =  {
           title: "Play now",
           id: 1,
           linkUrl: "play",
-          href: "play",
+          href: "/play",
           icon: <LocalPlayIcon />,
           private: false,
           publicOnly: true
@@ -24,7 +24,7 @@ const INITIAL_STATE =  {
           title: "Dashboard",
           id: 2,
           linkUrl: "dashboard",
-          href: "dashboard",
+          href: "/dashboard",
           icon: <DashboardIcon />,
           private: true
         },
@@ -32,7 +32,7 @@ const INITIAL_STATE =  {
           title: "Leaderboards",
           id: 3,
           linkUrl: "leaderboards",
-          href: "leaderboards",
+          href: "/leaderboards",
           icon: <SubtitlesIcon />,
           private: false
         },
@@ -40,7 +40,7 @@ const INITIAL_STATE =  {
           title: "Results",
           id: 4,
           linkUrl: "results",
-          href: "results",
+          href: "/results",
           icon: <AssignmentTurnedInIcon />,
           private: true
         },
@@ -48,7 +48,7 @@ const INITIAL_STATE =  {
           title: "Challenge Nanzo",
           id: 5,
           linkUrl: "challenge-nanzo",
-          href: "challenge-nanzo",
+          href: "/challenge-nanzo",
           icon: <Whatshot />,
           private: false
         },
@@ -56,7 +56,7 @@ const INITIAL_STATE =  {
           title: "Battle",
           id: 6,
           linkUrl: "battle",
-          href: "battle",
+          href: "/battle",
           icon: <SportsKabaddi />,
           private: false
         },
@@ -64,7 +64,7 @@ const INITIAL_STATE =  {
           title: "Account",
           id: 7,
           linkUrl: "account",
-          href: "account",
+          href: "/account",
           icon: <AccountBoxIcon />,
           private: true
         },
@@ -72,7 +72,7 @@ const INITIAL_STATE =  {
           title: "Settings",
           id: 8,
           linkUrl: "settings",
-          href: "settings",
+          href: "/settings",
           icon: <SettingsIcon />,
           private: true
         },
@@ -80,7 +80,7 @@ const INITIAL_STATE =  {
           title: "Sign out",
           id: 9,
           linkUrl: "sign-out",
-          href: "sign-out",
+          href: "/sign-out",
           icon: <ExitToAppIcon />,
           private: true,
           signOut: true
@@ -89,7 +89,7 @@ const INITIAL_STATE =  {
           title: "Admin",
           id: 10,
           linkUrl: "admin",
-          href: "admin",
+          href: "/admin",
           icon: <DashboardIcon />,
           private: true,
           publicOnly: true

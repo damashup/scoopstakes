@@ -4,7 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import { colorGreyLight1, colorPrimaryDark } from "../../../page-styles/base-styles";
 
 export const RoundNoHeaderPaper = styled(Paper)`
-    &&{background-color: ${colorGreyLight1};}
+    &&{
+        display: flex;
+        justify-content: space-between;
+        background-color: ${colorGreyLight1};}
 `;
 
 export const TypographyHeader = styled(Typography)`
